@@ -1,0 +1,9 @@
+<h1>Condo Show Page</h1>
+<h2><%= @condo.address %></h2>
+<p>Price:<%= @condo.price %></p>
+<p>Bedrooms:<%= @condo.bedroom %></p>
+<p>Bathrooms:<%= @condo.bathroom %></p>
+<p>Sq ft:<%= @condo.size %></p>
+<p><%= link_to 'back', condos_path %></p>
+<p><%= link_to 'edit', edit_condo_path(@condo) %></p>
+<p><%= link_to 'delete', condo_path(@condo), method: :delete, data: { confirm:'Are you sure?'} %></p>

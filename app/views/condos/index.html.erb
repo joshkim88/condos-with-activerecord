@@ -1,0 +1,11 @@
+<h1>All NYC Condos</h1>
+
+<h2><%= link_to 'Sell Your Condo!', new_condo_path %></h2>
+
+  <% @condos.each do |condo| %>
+    <h2><%= link_to condo.address, condo_path(condo) %></h2>
+    <p>price:<%= condo.price %></p>
+    <p>bedrooms:<%= condo.bedroom %></p>
+    <p>bathrooms:<%= condo.bathroom %></p>
+    <p>sq ft:<%= condo.size %></p>
+  <% end %>
